@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Bank, LineChart, Home, ShieldCheck, AlertTriangle, ArrowRight } from "lucide-react";
+import { Building, LineChart, Home, ShieldCheck, AlertTriangle, ArrowRight } from "lucide-react";
 
 const StorageSection = () => {
   return (
@@ -20,7 +20,7 @@ const StorageSection = () => {
         <Tabs defaultValue="bank" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid w-full grid-cols-3 h-auto">
             <TabsTrigger value="bank" className="py-3 flex gap-2 items-center justify-center">
-              <Bank className="h-4 w-4" />
+              <Building className="h-4 w-4" />
               <span>Банковские вклады</span>
             </TabsTrigger>
             <TabsTrigger value="invest" className="py-3 flex gap-2 items-center justify-center">
