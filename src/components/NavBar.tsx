@@ -9,32 +9,31 @@ import {
   NavigationMenuTrigger 
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { Banknote, Wallet, Lock } from "lucide-react";
+import { Banknote, Wallet, Lock, History } from "lucide-react";
 
 const NavBar = () => {
   return (
-    <header className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 shadow-md">
+    <header className="w-full bg-gradient-to-r from-primary-700 to-primary-500 shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold text-white hover:text-gray-100 transition-colors">
             <span className="flex items-center gap-2">
               <Banknote size={24} />
-              Деньги сегодня
+              Наличные сегодня
             </span>
           </Link>
           
           <NavigationMenu>
             <NavigationMenuList className="hidden md:flex">
               <NavigationMenuItem>
-                {/* Исправлено: убрал NavigationMenuLink, теперь используем обычную ссылку */}
                 <Link to="/" className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">
                   Главная
                 </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-white hover:bg-purple-700 bg-purple-800">
-                  Типы денег
+                <NavigationMenuTrigger className="text-white hover:bg-primary-600 bg-primary-700">
+                  Виды денег
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[400px] md:w-[500px]">
@@ -42,11 +41,11 @@ const NavBar = () => {
                       <NavigationMenuLink asChild>
                         <Link
                           to="/"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-indigo-500 to-purple-700 p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primary-500 to-primary-700 p-6 no-underline outline-none focus:shadow-md"
                         >
                           <Wallet className="h-6 w-6 text-white" />
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            Деньги в современном мире
+                            Современные деньги
                           </div>
                           <p className="text-sm leading-tight text-white/90">
                             Узнайте о разных типах денег и их роли в современном обществе
@@ -68,7 +67,42 @@ const NavBar = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-white hover:bg-purple-700 bg-purple-800">
+                <NavigationMenuTrigger className="text-white hover:bg-primary-600 bg-primary-700">
+                  История денег
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[400px] md:w-[500px]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-secondary-500 to-secondary-700 p-6 no-underline outline-none focus:shadow-md"
+                        >
+                          <History className="h-6 w-6 text-white" />
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
+                            Исторические деньги
+                          </div>
+                          <p className="text-sm leading-tight text-white/90">
+                            История развития денежных систем от древности до наших дней
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <ListItem href="/" title="Товарные деньги">
+                      От ракушек и соли до меха и чая
+                    </ListItem>
+                    <ListItem href="/" title="Металлические деньги">
+                      Эволюция монет из драгоценных металлов
+                    </ListItem>
+                    <ListItem href="/" title="Бумажные деньги">
+                      История появления и развития банкнот
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-white hover:bg-primary-600 bg-primary-700">
                   Хранение денег
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -77,7 +111,7 @@ const NavBar = () => {
                       <NavigationMenuLink asChild>
                         <Link
                           to="/"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-indigo-500 to-purple-700 p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primary-500 to-primary-700 p-6 no-underline outline-none focus:shadow-md"
                         >
                           <Lock className="h-6 w-6 text-white" />
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
