@@ -1,60 +1,69 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2 } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 const CallToAction = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-primary-700 to-primary-900 text-white">
+    <section className="py-16 bg-gradient-to-r from-primary-900 to-primary-800 text-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Наличные деньги: итоги и выводы</h2>
-            <p className="text-xl max-w-3xl mx-auto">
-              Так нужны ли наличные деньги в современном мире? Ответ зависит от многих факторов.
-            </p>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Оптимальное сочетание платежных средств
+          </h2>
+          <p className="text-xl mb-8">
+            В современном мире наиболее эффективно комбинировать разные типы денег и способы хранения
+            для достижения максимальной финансовой гибкости и безопасности.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <Card className="bg-white/10 backdrop-blur-sm border-0 hover:bg-white/20 transition-colors">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">💵</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Наличные</h3>
+                <p className="text-white/80">
+                  Держите небольшую сумму наличных для повседневных расходов и экстренных ситуаций.
+                </p>
+              </div>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-0 hover:bg-white/20 transition-colors">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">💳</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Безналичные</h3>
+                <p className="text-white/80">
+                  Используйте карты и онлайн-банкинг для большинства регулярных платежей и покупок.
+                </p>
+              </div>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-0 hover:bg-white/20 transition-colors">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-primary-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Инвестиции</h3>
+                <p className="text-white/80">
+                  Диверсифицируйте сбережения через разные инвестиционные инструменты для роста капитала.
+                </p>
+              </div>
+            </Card>
           </div>
           
-          <Card className="bg-white/10 border-none backdrop-blur-sm shadow-xl mb-10">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary-300" /> Баланс — ключ к успеху
-                  </h3>
-                  <p className="mb-4">
-                    Оптимальным решением является сбалансированный подход — сочетание наличных и безналичных форм денег.
-                    Распределение средств между разными формами и инструментами обеспечивает максимальную гибкость и безопасность.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary-300" /> Будущее наличных
-                  </h3>
-                  <p>
-                    Несмотря на развитие цифровых технологий, наличные деньги сохранят свою роль в обозримом будущем.
-                    Они обеспечивают важную функцию автономности, конфиденциальности и устойчивости к техническим сбоям.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Хотите узнать больше?</h3>
-            <p className="mb-6">Подпишитесь на нашу рассылку, чтобы получать самую актуальную информацию о финансах и деньгах</p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-              <input 
-                type="email" 
-                placeholder="Ваш email" 
-                className="px-4 py-3 rounded-md border-none focus:ring-2 focus:ring-primary-300 focus:outline-none text-gray-800 w-full"
-              />
-              <Button className="bg-white text-primary-700 hover:bg-gray-100 whitespace-nowrap">
-                Подписаться
-              </Button>
-            </div>
+          <div className="mt-12">
+            <Button 
+              size="lg" 
+              className="bg-white text-primary-800 hover:bg-gray-100"
+              onClick={() => {
+                const section = document.getElementById('money-types');
+                section?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Начать финансовое планирование
+            </Button>
           </div>
         </div>
       </div>

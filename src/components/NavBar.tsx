@@ -4,9 +4,9 @@ import {
   NavigationMenu, 
   NavigationMenuContent, 
   NavigationMenuItem, 
-  NavigationMenuLink, 
   NavigationMenuList, 
-  NavigationMenuTrigger 
+  NavigationMenuTrigger, 
+  NavigationMenuLink
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Banknote, Wallet, Lock, History } from "lucide-react";

@@ -1,119 +1,111 @@
 
 import { Link } from "react-router-dom";
-import { Banknote, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Banknote } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gray-900 text-gray-200">
+      <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 text-white text-xl font-bold mb-4">
-              <Banknote size={24} className="text-primary-400" />
-              <span>Наличные сегодня</span>
+          <div>
+            <Link to="/" className="flex items-center gap-2 text-white hover:text-primary-300 transition-colors">
+              <Banknote size={24} />
+              <span className="text-xl font-bold">Наличные сегодня</span>
             </Link>
-            <p className="mb-4 text-gray-400">
-              Информационный портал о роли наличных денег в современном мире и эффективных методах 
-              управления личными финансами.
+            <p className="mt-4 text-gray-400">
+              Информационный ресурс о роли наличных денег в современном мире
+              и оптимальных способах хранения финансов.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Разделы сайта</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Главная страница
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Виды денег
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  История денег
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Хранение средств
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Полезные ресурсы</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Блог о финансах
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Банковские сервисы
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Инвестиционные платформы
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                  Финансовая грамотность
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Контакты</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li className="flex items-center gap-2">
+                <span>📧</span>
+                <span>info@nalichnye.ru</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>📱</span>
+                <span>+7 (XXX) XXX-XX-XX</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>📍</span>
+                <span>Москва, Россия</span>
+              </li>
+            </ul>
+            
+            <div className="mt-6 flex gap-4">
+              <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                <span className="text-2xl">📘</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
+              <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                <span className="text-2xl">🐦</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={20} />
+              <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                <span className="text-2xl">📸</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Youtube size={20} />
+              <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors">
+                <span className="text-2xl">🔴</span>
               </a>
             </div>
           </div>
-          
-          <div>
-            <h3 className="text-white font-medium mb-4">Разделы сайта</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-gray-400 hover:text-white transition-colors">Главная</a>
-              </li>
-              <li>
-                <a href="#money-types" className="text-gray-400 hover:text-white transition-colors">Виды денег</a>
-              </li>
-              <li>
-                <a href="#money-storage" className="text-gray-400 hover:text-white transition-colors">Хранение денег</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Блог</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">О проекте</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-white font-medium mb-4">Полезные ресурсы</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Калькулятор инфляции</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Сравнение вкладов</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Калькулятор инвестиций</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Финансовый словарь</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Курсы валют</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-white font-medium mb-4">Контакты</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">
-                Email: info@nalichnie.ru
-              </li>
-              <li className="text-gray-400">
-                Телефон: +7 (XXX) XXX-XX-XX
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Обратная связь</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Предложить тему</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Сотрудничество</a>
-              </li>
-            </ul>
-          </div>
         </div>
         
-        <Separator className="my-8 bg-gray-700" />
-        
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            © 2023 Наличные сегодня. Все права защищены.
-          </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm">
-              Политика конфиденциальности
-            </a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm">
-              Условия использования
-            </a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm">
-              Карта сайта
-            </a>
-          </div>
+        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500 text-sm">
+          <p>© 2023 Наличные сегодня. Все права защищены.</p>
         </div>
       </div>
     </footer>
