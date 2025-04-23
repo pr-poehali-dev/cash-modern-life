@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Новые цвета для сайта о деньгах
+				'money-green': '#00A86B',
+				'money-blue': '#0066CC', 
+				'money-purple': '#8B5CF6',
+				'money-indigo': '#4F46E5'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
