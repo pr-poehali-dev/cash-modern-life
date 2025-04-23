@@ -26,10 +26,9 @@ const NavBar = () => {
           <NavigationMenu>
             <NavigationMenuList className="hidden md:flex">
               <NavigationMenuItem>
-                <Link to="/">
-                  <NavigationMenuLink className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">
-                    Главная
-                  </NavigationMenuLink>
+                {/* Исправлено: убрал NavigationMenuLink, теперь используем обычную ссылку */}
+                <Link to="/" className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-sm font-medium">
+                  Главная
                 </Link>
               </NavigationMenuItem>
               
@@ -40,18 +39,20 @@ const NavBar = () => {
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[400px] md:w-[500px]">
                     <li className="row-span-3">
-                      <Link
-                        to="/"
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-indigo-500 to-purple-700 p-6 no-underline outline-none focus:shadow-md"
-                      >
-                        <Wallet className="h-6 w-6 text-white" />
-                        <div className="mb-2 mt-4 text-lg font-medium text-white">
-                          Деньги в современном мире
-                        </div>
-                        <p className="text-sm leading-tight text-white/90">
-                          Узнайте о разных типах денег и их роли в современном обществе
-                        </p>
-                      </Link>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-indigo-500 to-purple-700 p-6 no-underline outline-none focus:shadow-md"
+                        >
+                          <Wallet className="h-6 w-6 text-white" />
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
+                            Деньги в современном мире
+                          </div>
+                          <p className="text-sm leading-tight text-white/90">
+                            Узнайте о разных типах денег и их роли в современном обществе
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
                     </li>
                     <ListItem href="/" title="Наличные деньги">
                       Преимущества и недостатки использования наличных
@@ -73,18 +74,20 @@ const NavBar = () => {
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[400px] md:w-[500px]">
                     <li className="row-span-3">
-                      <Link
-                        to="/"
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-indigo-500 to-purple-700 p-6 no-underline outline-none focus:shadow-md"
-                      >
-                        <Lock className="h-6 w-6 text-white" />
-                        <div className="mb-2 mt-4 text-lg font-medium text-white">
-                          Надежное хранение финансов
-                        </div>
-                        <p className="text-sm leading-tight text-white/90">
-                          Современные методы сохранения и приумножения капитала
-                        </p>
-                      </Link>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-indigo-500 to-purple-700 p-6 no-underline outline-none focus:shadow-md"
+                        >
+                          <Lock className="h-6 w-6 text-white" />
+                          <div className="mb-2 mt-4 text-lg font-medium text-white">
+                            Надежное хранение финансов
+                          </div>
+                          <p className="text-sm leading-tight text-white/90">
+                            Современные методы сохранения и приумножения капитала
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
                     </li>
                     <ListItem href="/" title="Банковские вклады">
                       Виды депозитов и их преимущества
